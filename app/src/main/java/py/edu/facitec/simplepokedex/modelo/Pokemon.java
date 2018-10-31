@@ -1,5 +1,7 @@
 package py.edu.facitec.simplepokedex.modelo;
 
+import java.util.Arrays;
+
 public class Pokemon {
     private int id;
     private String name;
@@ -81,5 +83,20 @@ public class Pokemon {
 
     public void setEvolution(String[] evolution) {
         this.evolution = evolution;
+    }
+
+    @Override
+    public String toString() {
+        return "Pokemon{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", species='" + species + '\'' +
+                ", type=" + Arrays.toString(type) +
+                ", height='" + height + '\'' +
+                ", weight='" + weight + '\'' +
+                ", abilities=" + Arrays.toString(abilities) +
+                ", stats=" + stats +
+                ", evolution=" + Arrays.toString(evolution) +
+                '}';
     }
 }
