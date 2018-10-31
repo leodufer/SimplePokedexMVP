@@ -20,7 +20,7 @@ public class PokemonPresenter extends Presenter {
         servicio = getRestAdapter().create(PokemonServicio.class);
     }
 
-    public void obtnerPokemones(){
+    public void obtenerDatos(){
         servicio.obtnerPokemones(new Callback<List<Pokemon>>() {
             @Override
             public void success(List<Pokemon> pokemons, Response response) {

@@ -3,7 +3,7 @@ package py.edu.facitec.simplepokedex.presenter;
 import py.edu.facitec.simplepokedex.view.MView;
 import retrofit.RestAdapter;
 
-public class Presenter {
+public abstract class Presenter {
     private MView mView;
     private RestAdapter restAdapter;
 
@@ -30,4 +30,5 @@ public class Presenter {
     public void setRestAdapter(RestAdapter restAdapter) {
         this.restAdapter = restAdapter;
     }
+    public abstract void  obtenerDatos();
 }
