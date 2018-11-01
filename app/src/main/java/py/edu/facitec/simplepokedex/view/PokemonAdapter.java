@@ -6,6 +6,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.squareup.picasso.Picasso;
@@ -49,6 +50,10 @@ public class PokemonAdapter extends BaseAdapter{
         ImageView imgImageView = convertView.findViewById(R.id.imgImageView);
         TextView nameTextView = convertView.findViewById(R.id.nameTextView);
         TextView speciesTextView = convertView.findViewById(R.id.speciesTextView);
+        LinearLayout typeContentLinearLayout = convertView.findViewById(R.id.typeContent);
+
+
+
         Pokemon p = pokemons.get(position);
 
         nameTextView.setText(p.getName());
@@ -58,6 +63,13 @@ public class PokemonAdapter extends BaseAdapter{
                 .load("http://simple-pokemon.herokuapp.com/images/pokemons/"
                         +p.getName().toLowerCase()+".jpg")
                 .into(imgImageView);
+
+        for(String type:p.getType()){
+            TextView textView = new TextView(context.getApplicationContext());
+            textView.setTextAlignment(View.TEXT_ALIGNMENT_TEXT_END);
+            textView.setText(type);
+            typeContentLinearLayout.addView(textView);
+        }
 
         return convertView;
     }

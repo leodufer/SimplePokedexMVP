@@ -1,9 +1,11 @@
 package py.edu.facitec.simplepokedex;
 
+import android.content.Intent;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.ProgressBar;
@@ -39,6 +41,7 @@ public class MainActivity extends ParentActivity<Pokemon>{
                 presenter.obtenerDatos();
             }
         });
+
     }
 
     @Override
@@ -49,5 +52,14 @@ public class MainActivity extends ParentActivity<Pokemon>{
         PokemonAdapter adapter = new PokemonAdapter(results,this);
         resultListView.setAdapter(adapter);
         resultListView.setVisibility(View.VISIBLE);
+        resultListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Pokemon p = (Pokemon) parent.getItemAtPosition(position);
+                Intent intent = new Intent(MainActivity.this,PokemonDetalleActivity.class);
+                intent.putExtra("pokemon",p);
+                startActivity(intent);
+            }
+        });
     }
 }

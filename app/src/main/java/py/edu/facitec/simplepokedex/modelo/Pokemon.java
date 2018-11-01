@@ -1,8 +1,9 @@
 package py.edu.facitec.simplepokedex.modelo;
 
+import java.io.Serializable;
 import java.util.Arrays;
 
-public class Pokemon {
+public class Pokemon implements Serializable{
     private int id;
     private String name;
     private String species;

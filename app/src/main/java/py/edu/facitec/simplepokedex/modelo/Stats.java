@@ -2,7 +2,9 @@ package py.edu.facitec.simplepokedex.modelo;
 
 import com.google.gson.annotations.SerializedName;
 
-public class Stats {
+import java.io.Serializable;
+
+public class Stats implements Serializable{
 
      private int hp;
      private int attack;
