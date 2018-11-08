@@ -28,7 +28,7 @@ public class PokemonPresenter extends Presenter {
         final List<Pokemon> pokemones = pokemonDao.getAll();
         if(pokemones != null && pokemones.size()>0){
             getmView().showSuccess(pokemones);
-
+            return;
         }
         servicio.obtnerPokemones(new Callback<List<Pokemon>>() {
             @Override

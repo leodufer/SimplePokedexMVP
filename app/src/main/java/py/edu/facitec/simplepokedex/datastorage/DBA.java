@@ -1,4 +1,4 @@
-package py.edu.facitec.simplepokedex.base.datastorage;
+package py.edu.facitec.simplepokedex.datastorage;
 
 import android.content.Context;
 

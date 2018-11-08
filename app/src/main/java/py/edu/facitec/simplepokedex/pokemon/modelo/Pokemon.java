@@ -1,5 +1,6 @@
 package py.edu.facitec.simplepokedex.pokemon.modelo;
 
+import com.j256.ormlite.field.DataType;
 import com.j256.ormlite.field.DatabaseField;
 import com.j256.ormlite.table.DatabaseTable;
 
@@ -13,7 +14,7 @@ public class Pokemon implements Serializable{
     private String name;
     @DatabaseField
     private String species;
-
+    @DatabaseField(dataType = DataType.SERIALIZABLE)
     private String[] type;
 
     @DatabaseField
@@ -21,10 +22,12 @@ public class Pokemon implements Serializable{
     @DatabaseField
     private String weight;
 
+    @DatabaseField(dataType = DataType.SERIALIZABLE)
     private String[] abilities;
-
+    @DatabaseField(dataType = DataType.SERIALIZABLE)
     private Stats stats;
 
+    @DatabaseField(dataType = DataType.SERIALIZABLE)
     private String[] evolution;
 
     public int getId() {

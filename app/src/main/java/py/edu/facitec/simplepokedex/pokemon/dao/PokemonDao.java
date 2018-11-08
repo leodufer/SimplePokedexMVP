@@ -2,12 +2,10 @@ package py.edu.facitec.simplepokedex.pokemon.dao;
 
 import android.content.Context;
 
-import com.j256.ormlite.table.TableUtils;
-
 import java.sql.SQLException;
 import java.util.List;
 
-import py.edu.facitec.simplepokedex.base.datastorage.DBA;
+import py.edu.facitec.simplepokedex.datastorage.DBA;
 import py.edu.facitec.simplepokedex.pokemon.modelo.Pokemon;
 
 public class PokemonDao {
