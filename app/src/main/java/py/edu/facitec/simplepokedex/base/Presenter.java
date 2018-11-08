@@ -1,6 +1,5 @@
-package py.edu.facitec.simplepokedex.presenter;
+package py.edu.facitec.simplepokedex.base;
 
-import py.edu.facitec.simplepokedex.view.MView;
 import retrofit.RestAdapter;
 
 public abstract class Presenter {

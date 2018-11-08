@@ -1,4 +1,4 @@
-package py.edu.facitec.simplepokedex.view;
+package py.edu.facitec.simplepokedex.base;
 
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.app.AppCompatActivity;
@@ -9,10 +9,10 @@ import android.widget.RelativeLayout;
 
 import java.util.List;
 
-import py.edu.facitec.simplepokedex.presenter.PokemonPresenter;
-import py.edu.facitec.simplepokedex.presenter.Presenter;
+import py.edu.facitec.simplepokedex.base.MView;
+import py.edu.facitec.simplepokedex.base.Presenter;
 
-public class ParentActivity<T> extends AppCompatActivity implements MView<T>{
+public class ParentActivity<T> extends AppCompatActivity implements MView<T> {
 
     public Presenter presenter;
 

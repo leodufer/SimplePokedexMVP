@@ -1,4 +1,4 @@
-package py.edu.facitec.simplepokedex.modelo;
+package py.edu.facitec.simplepokedex.pokemon.modelo;
 
 import com.google.gson.annotations.SerializedName;
 

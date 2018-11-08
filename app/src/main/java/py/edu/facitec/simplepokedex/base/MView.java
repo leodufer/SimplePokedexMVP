@@ -1,4 +1,4 @@
-package py.edu.facitec.simplepokedex.view;
+package py.edu.facitec.simplepokedex.base;
 
 import java.util.List;
 

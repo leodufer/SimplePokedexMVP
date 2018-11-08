@@ -1,16 +1,14 @@
-package py.edu.facitec.simplepokedex;
+package py.edu.facitec.simplepokedex.pokemon.view;
 
-import android.support.v7.app.AppCompatActivity;
+
 import android.os.Bundle;
 import android.widget.ImageView;
 import android.widget.TextView;
-
 import com.squareup.picasso.Picasso;
 
-import java.util.List;
-
-import py.edu.facitec.simplepokedex.modelo.Pokemon;
-import py.edu.facitec.simplepokedex.view.ParentActivity;
+import py.edu.facitec.simplepokedex.R;
+import py.edu.facitec.simplepokedex.pokemon.modelo.Pokemon;
+import py.edu.facitec.simplepokedex.base.ParentActivity;
 
 public class PokemonDetalleActivity extends ParentActivity<Pokemon> {
     TextView nameTextView;

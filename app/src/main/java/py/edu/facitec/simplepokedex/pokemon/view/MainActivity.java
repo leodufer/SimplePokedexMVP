@@ -1,25 +1,18 @@
-package py.edu.facitec.simplepokedex;
+package py.edu.facitec.simplepokedex.pokemon.view;
 
 import android.content.Intent;
 import android.support.v4.widget.SwipeRefreshLayout;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
-import android.widget.ListView;
-import android.widget.ProgressBar;
-import android.widget.RelativeLayout;
-import android.widget.Toast;
 
 import java.util.List;
 
-import py.edu.facitec.simplepokedex.modelo.Pokemon;
-import py.edu.facitec.simplepokedex.modelo.Stats;
-import py.edu.facitec.simplepokedex.presenter.PokemonPresenter;
-import py.edu.facitec.simplepokedex.view.MView;
-import py.edu.facitec.simplepokedex.view.ParentActivity;
-import py.edu.facitec.simplepokedex.view.PokemonAdapter;
+import py.edu.facitec.simplepokedex.R;
+import py.edu.facitec.simplepokedex.pokemon.modelo.Pokemon;
+import py.edu.facitec.simplepokedex.base.ParentActivity;
+import py.edu.facitec.simplepokedex.pokemon.presenter.PokemonPresenter;
+import py.edu.facitec.simplepokedex.pokemon.view.component.PokemonAdapter;
 
 public class MainActivity extends ParentActivity<Pokemon>{
 
@@ -29,8 +22,7 @@ public class MainActivity extends ParentActivity<Pokemon>{
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        presenter = new PokemonPresenter(this);
-        presenter.obtenerDatos();
+        presenter = new PokemonPresenter(this,getApplicationContext());
         errorStatus = findViewById(R.id.statuserror);
         progressBar = findViewById(R.id.progressbar);
         resultListView = findViewById(R.id.pokemoListView);
@@ -42,6 +34,7 @@ public class MainActivity extends ParentActivity<Pokemon>{
             }
         });
 
+        presenter.obtenerDatos();
     }
 
     @Override

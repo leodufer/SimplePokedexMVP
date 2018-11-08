@@ -1,17 +1,30 @@
-package py.edu.facitec.simplepokedex.modelo;
+package py.edu.facitec.simplepokedex.pokemon.modelo;
+
+import com.j256.ormlite.field.DatabaseField;
+import com.j256.ormlite.table.DatabaseTable;
 
 import java.io.Serializable;
 import java.util.Arrays;
-
+@DatabaseTable
 public class Pokemon implements Serializable{
+    @DatabaseField(generatedId = true)
     private int id;
+    @DatabaseField
     private String name;
+    @DatabaseField
     private String species;
+
     private String[] type;
+
+    @DatabaseField
     private String height;
+    @DatabaseField
     private String weight;
+
     private String[] abilities;
+
     private Stats stats;
+
     private String[] evolution;
 
     public int getId() {
